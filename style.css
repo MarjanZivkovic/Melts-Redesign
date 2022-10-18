@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400&display=swap');
+/*general styles*/
+:root{
+    --purple-color: rgba(129, 86, 204, 0.95)
+}
+*{
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    text-align: center;
+}
+*:focus{
+    outline: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+::-webkit-scrollbar{
+    width: 0.5rem;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: var(--purple-color)
+}
+a{
+    font-family: inherit;
+    color: inherit;
+    font-size: inherit;
+    text-decoration: none;
+}
+ul, ol{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+ul li, ol li{
+    text-align: left;
+}
+
+/*global classes*/
+.wrapper{
+    padding: 1rem 2rem 0;
+}
+.flex-between{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*hero*/
+.hero{
+    min-height: 100vh;
+    background: url(https://images.pexels.com/photos/3762453/pexels-photo-3762453.jpeg?cs=srgb&dl=pexels-shiny-diamond-3762453.jpg&fm=jpg) no-repeat center center / cover;
+}
+.overlay{
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding-bottom: 2rem;
+}
+.hero nav.flex-between{
+    justify-content: space-between;
+}
+.hero h1{
+    font-size: 1.3rem;
+    text-transform: capitalize;
+}
+.hero h4{
+    letter-spacing: 2px;
+    font-weight: 200;
+}
+.hero span{
+    color: var(--purple-color)
+}
+.btn{
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    margin: 2rem 0.5rem 4rem;
+    border: 1px solid;
+    border-radius: 10px;
+    font-weight: bold;
+    z-index: 2;
+}
+.btn:hover{
+    background-color: var(--purple-color);
+    color: #fff;
+    border-color: var(--purple-color);
+}
+.hero-img img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 3px rgba(129, 86, 204, 0.5)
+}
+.hero-img img:hover{
+    transform: scale(0.98);
+    box-shadow: 0 0 10px 10px rgba(129, 86, 204, 0.5)
+}
+
+/* section 1*/
+.dental-facts{
+    padding: 3rem 2rem;
+}
+.dental-facts p{
+    text-align: justify;
+    padding: 1rem 0.5rem;
+    border-top: 3px solid;
+    border-left: 3px solid;
+    border-image-source: radial-gradient( at top left, rgba(129, 86, 204, 0.7), transparent 70%);
+    border-image-slice: 1;
+}
+.dental-facts span{
+    color: var(--purple-color);
+    font-weight: bold;
+}
+.dental-facts a{
+    text-decoration: underline;
+}
+.dental-facts a:hover{
+    color: var(--purple-color);
+}
+
+/*section 2*/
+.you-will-learn{
+    background-color: #f8e5df;
+    padding: 4rem 0;
+}
+.you-will-learn ul li i{
+    margin-right: 0.5rem;
+}
+.you-will-learn .btn{
+    width: 60%;
+    margin-bottom: 5rem;
+}
+.you-will-learn nav{
+    background-color: #fff;
+    padding: 0.25rem;
+    border-radius: 5px;
+}
+.you-will-learn nav a{
+    margin: 0 0.5rem;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+.you-will-learn nav a:hover{
+    color: var(--purple-color);
+}
+
+/*Scientific references*/
+.scientific-references{
+    padding: 4rem 0;
+}
+.scientific-references ol{
+    max-width: 100%;
+}
+.scientific-references ol li{
+    text-align: justify;
+    margin: 1rem 0 1rem 1rem;
+    word-wrap: break-word;
+}
+.scientific-references img{
+    max-width: 100%;
+    margin: 3rem 0;
+}
+
+/*footer*/
+.disclaimer{
+    padding: 3rem 0;
+    background-color: #f8e5df;
+}
+.disclaimer .wrapper > div{
+    margin: 1rem 0;
+}
+.copyright{
+    background-color: rgb(229, 212, 184);
+    padding: 2rem 0;
+}
+.copyright .wrapper > div{
+    font-size: 0.9rem;
+    margin: 1rem 0;
+}
+
+/*responsive design*/
+@media (min-width: 768px){
+    .wrapper{
+        width: 80%;
+        margin: auto;
+    }
+}
+@media (min-width: 992px){
+    .wrapper{
+        width: 960px;
+    }
+    .flex-between{
+        justify-content: space-between;
+    }
+    .hero{
+        min-height: max-content;
+    }
+    .heading-video{
+        margin-top: 6rem;
+        gap: 3rem;
+    }
+    .heading-video > div{
+        flex: 1;
+    }
+    .btn{
+        width: 60%;
+    }
+    .dental-facts{
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+    .dental-facts p{
+        width: 45%;
+    }
+    .you-will-learn .flex-between *{
+        gap: 2rem;
+        align-items: center;
+    }
+    .you-will-learn .btn{
+        width: 40%;
+    }
+    .you-will-learn nav{
+        width: 60%;
+        margin:5rem auto 0;
+    }
+    .references{
+        align-items: flex-start;
+    }
+    .references ol{
+        width: 48%;
+    }
+}
+@media (min-width: 1920px){
+    .hero{
+        height: 70vh;
+    }
+}
